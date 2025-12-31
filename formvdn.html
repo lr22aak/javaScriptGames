@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form name="data" method="POST" action="formvdn.html" onsubmit="return validate();">
+	Name :<input type="text" name="pname" placeholder="name" /><br>
+    Email :<input type="text" name="email" placeholder="email@example.com" /><br>
+    <input type="submit" value="submit"><br>
+</form>
+
+<script type="text/javascript">
+
+	function validate(){
+
+	var a = document.data.pname.value;  // 
+	var b = document.data.email.value;  //
+	
+	var x = /^[a-zA-Z]+$/;
+	var y = /^[a-zA-Z@]+$/;
+	
+	if(a=="" || a==" "){
+		alert("name should not be empty....");
+		document.data.name.focus();
+		return false;
+	}else if(!a.match(x)){
+			alert("name should not contain special charectors");
+			document.data.name.focus();
+			return false;
+		}else if(b=="" || b==" "){
+				alert("email should not be empty");
+				document.data.email.focus();
+				return false;
+			}else if(!b.match(y)){
+				alert("email should contain '@' symbol");
+				document.data.email.focus();
+				return false;
+			}else{
+					alert("sucess");
+					return false;
+				}
+
+	}
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>move my box</title>
+<style>
+	#big{
+		background-color:green;
+		width:500px;
+		height:600px;
+		position:relative;
+	}
+	#small{
+		background-color:black;
+		width:100px;
+		height:100px;
+		position:absolute;
+	}
+</style>
+</head>
+
+<body>
+
+<button onclick="move()">start</button>
+
+<button onclick="stop()">stop</button>
+
+<div id="big">
+	<div id="small">
+    </div>
+   </div>
+    
+    
+<script>
+
+var s=document.getElementById('small');
+var ps=0;
+var x,y,z,w;
+
+function move(){
+clearInterval(x);
+clearInterval(y);
+clearInterval(z);
+clearInterval(w);
+
+
+	x=setInterval(pos1,5);
+	
+	function pos1(){
+		if(ps == 399){
+			clearInterval(x);
+			ps=0;
+			y=setInterval(pos2,5);
+		}
+		else{
+			ps++;
+			s.style.left=( ps + 'px');
+		}
+	}
+	function pos2(){
+		if(ps == 499){
+			clearInterval(y);
+			ps=399;
+			z=setInterval(pos3,5);
+		}
+		else{
+			ps++;
+			s.style.top=( ps + 'px');
+		}
+	}
+	function pos3(){
+		if(ps==1){
+			clearInterval(z);
+			ps=499;
+			w=setInterval(pos4,5);
+		}
+		else{
+			ps--;
+			//s.style.top="499px";
+			s.style.left=( ps + 'px');
+		}
+	}
+	function pos4(){
+		if(ps == 1){
+			clearInterval(w);
+		}
+		else{
+			ps--;
+			s.style.top=(ps + 'px');
+		}
+	}
+}
+function stop(){
+	
+	clearInterval(x);
+	clearInterval(y);
+	clearInterval(z);
+	clearInterval(w);
+
+}
+</script>
+
+</body>
+</html>

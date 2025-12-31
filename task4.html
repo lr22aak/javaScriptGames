@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+	
+	.newclass h1{
+			color:orange;
+		}
+	.newclass img{
+			padding-left:30%;
+		}
+	.newclass p{
+			color:yellow;
+			visibility:hidden;
+		}
+	.newclass{
+		background-color:#0FC;
+		}
+		
+
+</style>
+</head>
+
+<body>
+<div id="div">
+  <h1 id="h">Interview</h1>
+  <img src="img1.jpg" width="327" height="255" alt="image" />
+  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+</div>
+</body>
+<script>
+
+var a=document.getElementById('h');
+var b=document.getElementById('div');
+
+a.addEventListener('click',func);
+
+function func(){
+	b.classList.add("newclass");
+}
+
+var i = 0;
+while (i < 10) { // shows 0, then 1, then 2
+  alert( i );
+  i++;
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body id="bdy">
+	<h1 id="heading">Java script</h1>
+    <p id="p1">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+</body>
+<script>
+	var x=document.getElementById('heading');
+	var y=document.getElementById('bdy');
+	var p=document.getElementById('p1');
+		console.log(y);
+	x.addEventListener('click',func);
+	
+	function func(){
+	y.style.width='30%';
+	x.style.color='purple';
+	p.style.color='orange';
+	y.style.background='pink';
+		}
+</script>
+</html>

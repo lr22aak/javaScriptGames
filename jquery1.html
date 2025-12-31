@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<p id="clickme">If you click on me, I will disappear.</p>
+<p id="hideme">Click me away!</p>
+<p>Click me too!</p>
+
+<script>
+var a= document.getElementById('clickme');
+var y=document.getElementById('hideme');
+a= addEventListener('click', func);
+function func(){
+	y.style.display='none';
+	};
+
+</script>
+</body>
+</html>
